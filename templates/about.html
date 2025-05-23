@@ -3,10 +3,10 @@
 <h1>About Us</h1>
 <a href="{{ url_for('home') }}">Home</a>
 
-<ul>
+<ol>
     {% for member in team %}
-    <li>{{ member }}</li>
+    <li style="padding-bottom: 5">{{ member }}</li>
     {% endfor %}
-</ul>
+</ol>
 
 {% endblock %}
