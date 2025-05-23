@@ -12,7 +12,7 @@
             content="{% block meta_description %}Default site description goes here.{% endblock %}"
         />
         <meta name="keywords" content="flask, web, app, python, bootstrap" />
-        <meta name="robots" content="home, follow" />
+        <meta name="robots" content="main.home, follow" />
 
         <!-- Open Graph -->
         <meta
@@ -99,7 +99,7 @@
                 <div class="container">
                     <a
                         class="navbar-brand d-flex align-items-center"
-                        href="{{ url_for('home') }}"
+                            href="{{ url_for('main.home') }}"
                     >
                         <i
                             class="bi bi-lightning-charge-fill text-warning me-2"
@@ -124,29 +124,29 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a
-                                    class="nav-link {% if request.endpoint == 'home' %}active{% endif %}"
-                                    href="{{ url_for('home') }}"
+                                    class="nav-link {% if request.endpoint == 'main.home' %}active{% endif %}"
+                                    href="{{ url_for('main.home') }}"
                                     >Home</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link {% if request.endpoint == 'about' %}active{% endif %}"
-                                    href="{{ url_for('about') }}"
+                                    class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}"
+                                    href="{{ url_for('main.about') }}"
                                     >About</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}"
-                                    href="{{ url_for('contact') }}"
+                                    class="nav-link {% if request.endpoint == 'main.contact' %}active{% endif %}"
+                                        href="{{ url_for('main.contact') }}"
                                     >Contact</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}"
-                                    href="{{ url_for('dashboard') }}"
+                                    class="nav-link {% if request.endpoint == 'main.dashboard' %}active{% endif %}"
+                                    href="{{ url_for('main.dashboard') }}"
                                     >Dashboard</a
                                 >
                             </li>
@@ -184,7 +184,7 @@
                     <a href="https://github.com" class="text-dark me-2"
                         ><i class="bi bi-github"></i
                     ></a>
-                    <a href="mailto:contact@example.com" class="text-dark"
+                    <a href="mailto:main.contact@example.com" class="text-dark"
                         ><i class="bi bi-envelope-fill"></i
                     ></a>
                 </div>
