@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Your Tasks</h2>
+<a href="{{ url_for('tasks.add_task') }}" class="btn btn-success mb-3"
+    >+ Add Task</a
+>
+<ul class="list-group">
+    {% for task in tasks.values() %}
+    <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+    >
+        <div><strong>{{ task.title }}</strong> - {{ task.description }}</div>
+        <div>
+            <a
+                href="{{ url_for('tasks.edit_task', id=task.id) }}"
+                class="btn btn-sm btn-primary"
+                >Edit</a
+            >
+            <a
+                href="{{ url_for('tasks.delete_task', id=task.id) }}"
+                class="btn btn-sm btn-danger"
+                >Delete</a
+            >
+        </div>
+    </li>
+    {% else %}
+    <li class="list-group-item">No tasks yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -7,8 +7,12 @@ def create_app():
 
     from .routes.main import main_bp
     from .routes.auth import auth_bp
+
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
+
+    from .routes.tasks import tasks_bp
+    app.register_blueprint(tasks_bp)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
