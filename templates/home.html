@@ -1,4 +1,17 @@
 {% extends 'base.html' %} {% block title %}Home{% endblock %} {% block content
 %}
-<h1>Welcome to Flask!</h1>
+<h1>Welcome to Flask! Practics</h1>
+
+<nav>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+</nav>
+
+<article>
+    <p>This is the home page.</p>
+</article>
+
 {% endblock %}
