@@ -8,7 +8,8 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    team = ['John Doe', 'Jane Smith', 'Alice Johnson']
+    return render_template('about.html', team=team)
 
 @app.route('/contact')
 def contact():
